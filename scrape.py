@@ -1,4 +1,4 @@
-from BeautifulSoup import BeautifulSoup
+]from BeautifulSoup import BeautifulSoup
 
 # We're going to grab the HTML from a local file rather than the Internet, just so we don't irritate
 # the Ethics Commission with a bunch of requests.
@@ -19,16 +19,14 @@ output = []
 # 5. At the end, print the output list
 
 ########## YOUR CODE GOES HERE ##########
-for tr in results_table.findAll('tr'):
+for tr in results_table.findAll('tr')[1:]:
     output_row = []
 
     for td in tr.findAll('td'):
         data = td.text.replace('&nbsp;', '')
         output_row.append(data)
 
-        if output_row[-1] == 'Columbia, City Of':
-
-            output.append(output_row[1:])
+    if output_row[-1] == 'Columbia, City Of':
+        output.append(output_row[1:])
 
 print output
-		
