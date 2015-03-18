@@ -26,9 +26,9 @@ for tr in results_table.findAll('tr'):
         data = td.text.replace('&nbsp;', '')
         output_row.append(data)
 
-    if output_row[-1] == 'Columbia, City Of':
+        if output_row[-1] == 'Columbia, City Of':
 
-        output.append(output_row[1:])
+            output.append(output_row[1:])
 
 print output
 		
